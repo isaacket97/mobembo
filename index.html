@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobembo - Explorez la RDC autrement</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <nav class="navbar">
+      <h1 class="logo">Mobembo</h1>
+      <ul class="nav-links">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">Activités</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h2>Vivez une expérience unique en RDC</h2>
+      <p>Réservez vos hôtels, activités et transports en quelques clics</p>
+      <form class="search-bar">
+        <input type="text" placeholder="Où allez-vous ?" id="destination">
+        <input type="date" id="checkin">
+        <input type="date" id="checkout">
+        <select id="type">
+          <option value="">Service</option>
+          <option value="hotel">Hébergement</option>
+          <option value="activity">Activité</option>
+          <option value="transport">Transport</option>
+        </select>
+        <button type="submit">Rechercher</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- ===== CATEGORIES ===== -->
+  <section class="categories">
+    <h3>Nos services</h3>
+    <div class="cards">
+      <div class="card">
+        <img src="assets/img/hotel.jpg" alt="Hôtels & Lodges">
+        <h4>Hébergement</h4>
+      </div>
+      <div class="card">
+        <img src="assets/img/safari.jpg" alt="Safari">
+        <h4>Activités</h4>
+      </div>
+      <div class="card">
+        <img src="assets/img/transport.jpg" alt="Transport VIP">
+        <h4>Transport</h4>
+      </div>
+      <div class="card">
+        <img src="assets/img/spa.jpg" alt="Bien-être">
+        <h4>Bien-être</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials">
+    <h3>Ce que disent nos voyageurs</h3>
+    <div class="testimonial-cards">
+      <div class="t-card">
+        <p>"Un safari inoubliable, organisation parfaite !"</p>
+        <span>- Marie, France</span>
+      </div>
+      <div class="t-card">
+        <p>"Transport VIP impeccable dès l’aéroport. Merci Mobembo."</p>
+        <span>- John, UK</span>
+      </div>
+      <div class="t-card">
+        <p>"Des hôtels confortables et une équipe aux petits soins."</p>
+        <span>- Awa, Sénégal</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Mobembo - Tous droits réservés</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

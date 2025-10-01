@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobembo - Détail</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <nav class="navbar">
+    <h1 class="logo">Mobembo</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="search.html">Recherche</a></li>
+      <li><a href="#">Mon compte</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== DETAIL CONTENT ===== -->
+  <main class="detail-container">
+    <!-- Galerie photos -->
+    <section class="gallery">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper" id="gallery-wrapper">
+          <!-- Images injectées par JS -->
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Infos principales -->
+    <section class="detail-info" id="detail-info">
+      <!-- Contenu injecté via JS -->
+    </section>
+
+    <!-- Carte localisation -->
+    <section class="map-section">
+      <h3>Localisation</h3>
+      <div id="detail-map"></div>
+    </section>
+
+    <!-- Avis -->
+    <section class="reviews">
+      <h3>Avis des voyageurs</h3>
+      <div id="reviews-list">
+        <p><em>Chargement des avis...</em></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="js/mockData.js"></script>
+  <script src="js/detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobembo - Mon espace</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <nav class="navbar">
+    <h1 class="logo">Mobembo</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="search.html">Recherche</a></li>
+      <li><a href="profile.html" class="active">Mon compte</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== PROFILE CONTENT ===== -->
+  <main class="profile-container">
+    <h2>Mon espace</h2>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="profile">👤 Mon profil</button>
+      <button class="tab-btn" data-tab="bookings">📑 Mes réservations</button>
+    </div>
+
+    <!-- Profil -->
+    <section class="tab-content active" id="profile">
+      <h3>Mes informations</h3>
+      <form class="profile-form">
+        <label>Nom complet
+          <input type="text" id="profileName" value="Jean Mbemba">
+        </label>
+        <label>Email
+          <input type="email" id="profileEmail" value="jean.mbemba@example.com">
+        </label>
+        <label>Téléphone
+          <input type="tel" id="profilePhone" value="+243 900 000 000">
+        </label>
+        <button type="button" class="btn">Mettre à jour</button>
+      </form>
+    </section>
+
+    <!-- Réservations -->
+    <section class="tab-content" id="bookings">
+      <h3>Mes réservations</h3>
+      <table class="booking-table">
+        <thead>
+          <tr>
+            <th>Numéro</th>
+            <th>Service</th>
+            <th>Date</th>
+            <th>Statut</th>
+          </tr>
+        </thead>
+        <tbody id="bookings-list">
+          <!-- Rempli via JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/mockData.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

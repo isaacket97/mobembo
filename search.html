@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobembo - Résultats de recherche</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <nav class="navbar">
+    <h1 class="logo">Mobembo</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="#">Destinations</a></li>
+      <li><a href="#">Activités</a></li>
+      <li><a href="#">Mon compte</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== SEARCH RESULTS ===== -->
+  <main class="results-container">
+    <!-- Sidebar Filtres -->
+    <aside class="filters">
+      <h3>Filtres</h3>
+      <label>Prix max (USD)
+        <input type="number" id="priceFilter" placeholder="Ex: 200">
+      </label>
+      <label>Type
+        <select id="typeFilter">
+          <option value="">Tous</option>
+          <option value="hotel">Hébergement</option>
+          <option value="activity">Activité</option>
+          <option value="transport">Transport</option>
+        </select>
+      </label>
+      <label>Note minimale
+        <select id="ratingFilter">
+          <option value="">Toutes</option>
+          <option value="3">3+</option>
+          <option value="4">4+</option>
+          <option value="5">5</option>
+        </select>
+      </label>
+      <button id="applyFilters">Appliquer</button>
+    </aside>
+
+    <!-- Résultats -->
+    <section class="results">
+      <h2>Résultats disponibles</h2>
+      <div id="results-list" class="results-list"></div>
+    </section>
+
+    <!-- Carte -->
+    <section class="map-section">
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="js/mockData.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>
