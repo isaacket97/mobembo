@@ -1,31 +1,109 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobembo - Réservation</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Réservation - Mobembo</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
-  <nav class="navbar">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar solid">
     <h1 class="logo">Mobembo</h1>
-    <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="search.html">Recherche</a></li>
-      <li><a href="#">Mon compte</a></li>
+    <!-- Bouton hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#home">Accueil</a></li>
+      <li><a href="index.html#destinations">Destinations</a></li>
+      <li><a href="index.html#activities">Activités</a></li>
+      <li><a href="index.html#about">À propos</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
     </ul>
+    <button class="btn-navbar" onclick="window.location.href='search.html'">Explorer</button>
   </nav>
 
-  <!-- ===== BOOKING FLOW ===== -->
-  <main class="booking-container">
-    <h2>Réservation</h2>
-    <div id="booking-steps">
-      <!-- Étapes injectées par JS -->
-    </div>
-  </main>
+  <!-- ===== SECTION RÉSERVATION ===== -->
+  <section class="booking">
+    <div class="booking-container">
+      <h2 id="offerTitle">Réserver une offre</h2>
+      <p class="subtitle">Veuillez remplir vos informations pour confirmer votre réservation</p>
 
-  <script src="js/mockData.js"></script>
+      <form id="bookingForm">
+        <div class="form-group">
+          <label>Nom complet</label>
+          <input type="text" id="name" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+          <label>Téléphone WhatsApp</label>
+          <input type="tel" id="phone" placeholder="+243..." required>
+        </div>
+        <div class="form-group">
+          <label>Email (facultatif)</label>
+          <input type="email" id="email" placeholder="exemple@mail.com">
+        </div>
+
+        <div class="booking-actions">
+          <button type="submit" class="btn-hero">Confirmer la réservation</button>
+          <button type="button" class="btn-whatsapp" onclick="bookViaWhatsApp()">Réserver via WhatsApp</button>
+        </div>
+      </form>
+
+      <p id="confirmationMessage" class="confirmation-message"></p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Bloc 1 : Logo + Mission -->
+      <div class="footer-section">
+        <h2 class="logo">Mobembo</h2>
+        <p>Explorez la République Démocratique du Congo autrement — entre nature, culture et aventure, avec une approche durable et responsable.</p>
+      </div>
+
+      <!-- Bloc 2 : Liens rapides -->
+      <div class="footer-section">
+        <h4>Liens rapides</h4>
+        <ul>
+          <li><a href="#hero">Accueil</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#activities">Activités</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Bloc 3 : Contact + Réseaux -->
+      <div class="footer-section">
+        <h4>Nous contacter</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> Kinshasa, RDC</li>
+          <li><i class="fa-solid fa-envelope"></i> contact@mobembo.com</li>
+          <li><i class="fa-solid fa-phone"></i> +243 243 243 243</li>
+        </ul>
+        <div class="footer-socials">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bas de page -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span>Mobembo</span> — Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
   <script src="js/booking.js"></script>
 </body>
 </html>

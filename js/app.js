@@ -58,3 +58,22 @@ if (testimonialContainer) {
     });
   }, 4000);
 }
+
+// ===== MENU HAMBURGER =====
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-links"); // 🔁 renommé ici
+
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    navMenu.classList.toggle("show");
+  });
+
+  // Fermer le menu quand on clique sur un lien
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      menuToggle.classList.remove("active");
+      navMenu.classList.remove("show");
+    });
+  });
+}
