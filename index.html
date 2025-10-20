@@ -5,79 +5,273 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mobembo - Explorez la RDC autrement</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar transparent" id="navbar">
+    <h1 class="logo">Mobembo</h1>
+    <ul class="nav-links">
+      <li><a href="#hero" class="active">Accueil</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#activities">Activités</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#testimonials">Témoignages</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="btn-navbar" onclick="window.location.href='search.html'">Réserver</button>
+  </nav>
+
   <!-- ===== HERO ===== -->
-  <header class="hero">
+  <header class="hero" id="hero">
     <div class="overlay"></div>
-    <nav class="navbar">
-      <h1 class="logo">Mobembo</h1>
-      <ul class="nav-links">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Destinations</a></li>
-        <li><a href="#">Activités</a></li>
-        <li><a href="#">À propos</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
     <div class="hero-content">
-      <h2>Vivez une expérience unique en RDC</h2>
-      <p>Réservez vos hôtels, activités et transports en quelques clics</p>
-      <form class="search-bar">
-        <input type="text" placeholder="Où allez-vous ?" id="destination">
-        <input type="date" id="checkin">
-        <input type="date" id="checkout">
-        <select id="type">
-          <option value="">Service</option>
-          <option value="hotel">Hébergement</option>
-          <option value="activity">Activité</option>
-          <option value="transport">Transport</option>
-        </select>
-        <button type="submit">Rechercher</button>
-      </form>
+      <h2>
+        Découvrez la <span class="highlight">beauté</span> et la <span class="highlight">diversité</span> du Congo
+      </h2>
+      <p>
+        Réservez vos <span class="highlight">sites touristiques, hôtels et transports</span> en quelques clics <br>
+        <strong>Mobembo</strong> votre partenaire pour explorer, séjourner et vous émerveiller.
+      </p>
+      <button class="btn-hero" onclick="window.location.href='search.html'">Réserver maintenant</button>
     </div>
   </header>
 
-  <!-- ===== CATEGORIES ===== -->
-  <section class="categories">
-    <h3>Nos services</h3>
-    <div class="cards">
-      <div class="card">
-        <img src="assets/img/hotel.jpg" alt="Hôtels & Lodges">
-        <h4>Hébergement</h4>
+  <!-- ===== DESTINATIONS ===== -->
+  <section id="destinations" class="destinations">
+    <h3>Découvrez nos destinations phares</h3>
+    <p class="section-subtitle">Des lieux emblématiques à explorer à travers la République Démocratique du Congo</p>
+
+    <div class="grid-destinations">
+      <div class="dest-card">
+        <img src="assets/img/destinations/lola-ya-bonobo.jpg" alt="Lola ya Bonobo">
+        <h4>Lola ya Bonobo (Kinshasa)</h4>
+        <p>Sanctuaire des bonobos orphelins, immersion unique dans la faune congolaise.</p>
       </div>
-      <div class="card">
-        <img src="assets/img/safari.jpg" alt="Safari">
-        <h4>Activités</h4>
+
+      <div class="dest-card">
+        <img src="assets/img/destinations/musee-national-kinshasa.jpg" alt="Musée National du Congo">
+        <h4>Musée National du Congo (Kinshasa)</h4>
+        <p>Découvrez le patrimoine et la culture du pays à travers ses trésors historiques.</p>
       </div>
-      <div class="card">
-        <img src="assets/img/transport.jpg" alt="Transport VIP">
-        <h4>Transport</h4>
+
+      <div class="dest-card">
+        <img src="assets/img/destinations/vallee-nsele.jpg" alt="Parc de la Vallée de la Nsele">
+        <h4>Parc de la Vallée de la N’sele (Kinshasa)</h4>
+        <p>Un écrin de nature et de safari à quelques kilomètres du centre-ville.</p>
       </div>
-      <div class="card">
-        <img src="assets/img/spa.jpg" alt="Bien-être">
-        <h4>Bien-être</h4>
+
+      <div class="dest-card">
+        <img src="assets/img/destinations/musee-lubumbashi.jpg" alt="Musée National de Lubumbashi">
+        <h4>Musée National de Lubumbashi</h4>
+        <p>Plongez dans l’histoire et l’ethnographie du Katanga.</p>
+      </div>
+
+      <div class="dest-card">
+        <img src="assets/img/destinations/zoo-lubumbashi.jpg" alt="Zoo de Lubumbashi">
+        <h4>Zoo & Jardin Botanique (Lubumbashi)</h4>
+        <p>Un lieu verdoyant abritant la faune et la flore typiques du Katanga.</p>
+      </div>
+
+      <div class="dest-card">
+        <img src="assets/img/destinations/musee-minier.png" alt="Musée Minier de Lubumbashi">
+        <h4>Musée Minier (Lubumbashi)</h4>
+        <p>Découvrez la mémoire vivante du cuivre et du cobalt congolais.</p>
+      </div>
+
+      <div class="dest-card">
+        <img src="assets/img/destinations/chutes-boyoma.jpg" alt="Chutes de Boyoma">
+        <h4>Chutes de Boyoma (Kisangani)</h4>
+        <p>Les cascades spectaculaires du fleuve Congo, un spectacle naturel à couper le souffle.</p>
+      </div>
+
+      <div class="dest-card">
+        <img src="assets/img/destinations/pêche-wagenia.jpg" alt="Village Wagenia">
+        <h4>Village des Pêcheurs Wagenia (Kisangani)</h4>
+        <p>Découvrez une tradition de pêche ancestrale, unique au monde.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== TESTIMONIALS ===== -->
-  <section class="testimonials">
+  <!-- ===== ACTIVITÉS ===== -->
+  <section id="activities" class="activities">
+    <h3>Vivez des activités inoubliables</h3>
+    <p class="section-subtitle">Des expériences authentiques et immersives à travers le Congo</p>
+
+    <div class="activity-grid">
+      <div class="activity-item">
+        <img src="assets/img/activités/croisiere-congo.jpg" alt="Croisière Congo">
+        <div class="overlay">
+          <h4>Croisière au coucher du soleil</h4>
+          <p>Admirez le fleuve Congo sous un ciel doré.</p>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <img src="assets/img/activités/safari-nsele.jpg" alt="Safari Nsele">
+        <div class="overlay">
+          <h4>Safari à la Vallée de la N’sele</h4>
+          <p>Rencontrez la faune sauvage à deux pas de Kinshasa.</p>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <img src="assets/img/activités/soiree-culturelle.jpg" alt="Soirée culturelle">
+        <div class="overlay">
+          <h4>Soirée culturelle congolaise</h4>
+          <p>Vibrez au rythme de la rumba et du soukous.</p>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <img src="assets/img/activités/danse-lubumbashi.jpg" alt="Danse Lubumbashi">
+        <div class="overlay">
+          <h4>Spectacle de danse à Lubumbashi</h4>
+          <p>Un moment d’art et de tradition.</p>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <img src="assets/img/activités/lac-kipopo.jpg" alt="Lac Kipopo">
+        <div class="overlay">
+          <h4>Pique-nique au Lac Kipopo</h4>
+          <p>Détente, nature et activités nautiques.</p>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <img src="assets/img/activités/visite-minier.jpg" alt="Visite minière">
+        <div class="overlay">
+          <h4>Visite guidée d’un site minier</h4>
+          <p>Découvrez l’histoire du cuivre et du cobalt.</p>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <img src="assets/img/activités/chutes-boyoma-activite.jpg" alt="Boyoma">
+        <div class="overlay">
+          <h4>Exploration des Chutes de Boyoma</h4>
+          <p>Photographie et excursion en pirogue.</p>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <img src="assets/img/activités/pêche-wagenia-activite.jpg" alt="Pêche Wagenia">
+        <div class="overlay">
+          <h4>Initiation à la pêche Wagenia</h4>
+          <p>Vivez la tradition ancestrale de Kisangani.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== À PROPOS ===== -->
+  <section id="about" class="about">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="assets/img/about.jpg" alt="Mobembo - Tourisme RDC">
+      </div>
+
+      <div class="about-content">
+        <h3>À propos de <span class="highlight">Mobembo</span></h3>
+        <p class="intro">
+          Mobembo est une entreprise congolaise innovante dédiée à la valorisation du tourisme durable et à la découverte du patrimoine naturel et culturel exceptionnel de la République Démocratique du Congo.
+        </p>
+
+        <div class="about-points">
+          <div class="point">
+            <i class="fa-solid fa-earth-africa icon"></i>
+            <div>
+              <h4>Tourisme responsable</h4>
+              <p>Nous mettons en avant des expériences qui respectent la nature, la culture et les communautés locales.</p>
+            </div>
+          </div>
+
+          <div class="point">
+            <i class="fa-solid fa-handshake icon"></i>
+            <div>
+              <h4>Partenariats locaux</h4>
+              <p>Mobembo collabore avec des acteurs congolais pour soutenir un développement touristique inclusif.</p>
+            </div>
+          </div>
+
+          <div class="point">
+            <i class="fa-solid fa-star icon"></i>
+            <div>
+              <h4>Expériences authentiques</h4>
+              <p>Chaque voyage avec nous est une immersion culturelle, humaine et naturelle unique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TÉMOIGNAGES ===== -->
+  <section id="testimonials" class="testimonials">
     <h3>Ce que disent nos voyageurs</h3>
-    <div class="testimonial-cards">
-      <div class="t-card">
-        <p>"Un safari inoubliable, organisation parfaite !"</p>
-        <span>- Marie, France</span>
+    <p class="section-subtitle">Des expériences authentiques et inoubliables vécues avec Mobembo</p>
+
+    <div class="testimonial-container">
+      <div class="testimonial-card">
+        <img src="assets/img/témoignages/T3.jpg" alt="Marie">
+        <p class="quote">“Un safari inoubliable ! L’organisation était parfaite et l’équipe très chaleureuse.”</p>
+        <div class="rating">★★★★★</div>
+        <h4>Jude Ilunga</h4>
+        <span class="country">RDC</span>
       </div>
-      <div class="t-card">
-        <p>"Transport VIP impeccable dès l’aéroport. Merci Mobembo."</p>
-        <span>- John, UK</span>
+
+      <div class="testimonial-card">
+        <img src="assets/img/témoignages/T2.jpg" alt="John">
+        <p class="quote">“Service impeccable. Une expérience VIP que je recommande vivement.”</p>
+        <div class="rating">★★★★</div>
+        <h4>John Smith</h4>
+        <span class="country">Cameroun</span>
       </div>
-      <div class="t-card">
-        <p>"Des hôtels confortables et une équipe aux petits soins."</p>
-        <span>- Awa, Sénégal</span>
+
+      <div class="testimonial-card">
+        <img src="assets/img/témoignages/T1.jpg" alt="Awa">
+        <p class="quote">“Des hôtels confortables et des guides passionnés. Mobembo, c’est le Congo dans toute sa beauté.”</p>
+        <div class="rating">★★★★★</div>
+        <h4>Awa Diop</h4>
+        <span class="country">France</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact">
+    <div class="contact-container">
+      <!-- Bloc Informations -->
+      <div class="contact-info">
+        <h3>Contactez <span class="highlight">Mobembo</span></h3>
+        <p>Notre équipe est à votre écoute pour toute question ou collaboration. Nous serons ravis de vous aider à planifier votre prochaine aventure en RDC.</p>
+        <ul>
+          <li><i class="fa-solid fa-location-dot icon"></i> Kinshasa, République Démocratique du Congo</li>
+          <li><i class="fa-solid fa-envelope icon"></i> contact@mobembo.com</li>
+          <li><i class="fa-solid fa-phone icon"></i> +243 243 243 243</li>
+        </ul>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="contact-form">
+        <form>
+          <div class="form-group">
+            <label>Nom complet</label>
+            <input type="text" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="Votre adresse email" required>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Votre message..." required></textarea>
+          </div>
+          <button type="submit" class="btn-hero">Envoyer</button>
+        </form>
       </div>
     </div>
   </section>

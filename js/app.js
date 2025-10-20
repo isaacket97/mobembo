@@ -1,8 +1,60 @@
-// Exemple simple pour la recherche
-document.querySelector(".search-bar").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const dest = document.getElementById("destination").value;
-  const type = document.getElementById("type").value;
-  // Pour l'instant, on simule une redirection vers search.html
-  window.location.href = `search.html?destination=${dest}&type=${type}`;
+const navbar = document.getElementById("navbar");
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+
+  // Transparente ↔ Solide
+  if (currentScroll <= 50) {
+    navbar.classList.add("transparent");
+    navbar.classList.remove("solid");
+  } else {
+    navbar.classList.add("solid");
+    navbar.classList.remove("transparent");
+  }
+
+  // Animation de disparition / réapparition
+  if (currentScroll > lastScroll && currentScroll > 100) {
+    navbar.style.top = "-80px";
+  } else {
+    navbar.style.top = "0";
+  }
+
+  lastScroll = currentScroll;
 });
+
+// Activation du lien actif selon la section visible
+const sections = document.querySelectorAll("section, header");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 150;
+    if (scrollY >= sectionTop) current = section.getAttribute("id");
+  });
+
+  navLinks.forEach((a) => {
+    a.classList.remove("active");
+    if (a.getAttribute("href") === "#" + current) {
+      a.classList.add("active");
+    }
+  });
+});
+
+// ===== Défilement automatique des témoignages =====
+const testimonialContainer = document.querySelector('.testimonial-container');
+
+if (testimonialContainer) {
+  let scrollPosition = 0;
+  setInterval(() => {
+    scrollPosition += 350;
+    if (scrollPosition >= testimonialContainer.scrollWidth - testimonialContainer.clientWidth) {
+      scrollPosition = 0;
+    }
+    testimonialContainer.scrollTo({
+      left: scrollPosition,
+      behavior: 'smooth'
+    });
+  }, 4000);
+}
