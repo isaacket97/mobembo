@@ -3,63 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobembo - Résultats de recherche</title>
+  <title>Recherche d'offres - Mobembo</title>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
-  <nav class="navbar">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar solid">
     <h1 class="logo">Mobembo</h1>
     <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="#">Destinations</a></li>
-      <li><a href="#">Activités</a></li>
-      <li><a href="#">Mon compte</a></li>
+      <li><a href="index.html#home">Accueil</a></li>
+      <li><a href="index.html#destinations">Destinations</a></li>
+      <li><a href="index.html#activities">Activités</a></li>
+      <li><a href="index.html#about">À propos</a></li>
+      <li><a href="#testimonials">Témoignages</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
     </ul>
+    <button class="btn-navbar" onclick="window.location.href='search.html'">Réserver</button>
   </nav>
 
-  <!-- ===== SEARCH RESULTS ===== -->
-  <main class="results-container">
-    <!-- Sidebar Filtres -->
-    <aside class="filters">
-      <h3>Filtres</h3>
-      <label>Prix max (USD)
-        <input type="number" id="priceFilter" placeholder="Ex: 200">
-      </label>
-      <label>Type
-        <select id="typeFilter">
-          <option value="">Tous</option>
-          <option value="hotel">Hébergement</option>
-          <option value="activity">Activité</option>
+  <!-- ===== SECTION RECHERCHE ===== -->
+  <section class="search-header">
+    <div class="search-container">
+      <h2>Recherchez votre prochaine expérience</h2>
+      <p>Explorez les meilleures offres de voyage, d’hébergement et d’activités en RDC</p>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Rechercher avec un mot clé">
+        <select id="filterType">
+          <option value="">Tous les types</option>
+          <option value="destination">Destination</option>
+          <option value="activité">Activité</option>
+          <option value="hébergement">Hébergement</option>
           <option value="transport">Transport</option>
         </select>
-      </label>
-      <label>Note minimale
-        <select id="ratingFilter">
-          <option value="">Toutes</option>
-          <option value="3">3+</option>
-          <option value="4">4+</option>
-          <option value="5">5</option>
-        </select>
-      </label>
-      <button id="applyFilters">Appliquer</button>
-    </aside>
+        <button class="btn-hero" onclick="filterOffers()">Rechercher</button>
+      </div>
+    </div>
+  </section>
 
-    <!-- Résultats -->
-    <section class="results">
-      <h2>Résultats disponibles</h2>
-      <div id="results-list" class="results-list"></div>
-    </section>
+  <!-- ===== LISTE DES OFFRES ===== -->
+  <section class="offers">
+    <div class="offers-grid" id="offersGrid">
+      <!-- Les offres seront insérées ici dynamiquement -->
+    </div>
+  </section>
 
-    <!-- Carte -->
-    <section class="map-section">
-      <div id="map"></div>
-    </section>
-  </main>
+  <!-- ===== PAGINATION ===== -->
+  <div class="pagination" id="pagination"></div>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="js/mockData.js"></script>
-  <script src="js/search.js"></script>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Bloc 1 : Logo + Mission -->
+      <div class="footer-section">
+        <h2 class="logo">Mobembo</h2>
+        <p>Explorez la République Démocratique du Congo autrement — entre nature, culture et aventure, avec une approche durable et responsable.</p>
+      </div>
+
+      <!-- Bloc 2 : Liens rapides -->
+      <div class="footer-section">
+        <h4>Liens rapides</h4>
+        <ul>
+          <li><a href="#hero">Accueil</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#activities">Activités</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Bloc 3 : Contact + Réseaux -->
+      <div class="footer-section">
+        <h4>Nous contacter</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> Kinshasa, RDC</li>
+          <li><i class="fa-solid fa-envelope"></i> contact@mobembo.com</li>
+          <li><i class="fa-solid fa-phone"></i> +243 243 243 243</li>
+        </ul>
+        <div class="footer-socials">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bas de page -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span>Mobembo</span> — Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/mockdata.js"></script>
+  <script src="js/offers.js"></script>
 </body>
 </html>
