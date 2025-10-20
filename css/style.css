@@ -412,9 +412,9 @@ ul { list-style: none; }
 
 /* ===== CONTACT ===== */
 .contact {
-  background: var(--secondary);
-  color: #fff;
-  padding: 100px 40px;
+  background: #fff; /* fond clair */
+  color: var(--text-dark);
+  padding: 120px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -425,10 +425,10 @@ ul { list-style: none; }
   gap: 60px;
   max-width: 1100px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--secondary);
+  color: #fff;
   border-radius: 16px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   padding: 60px;
 }
 
@@ -524,8 +524,109 @@ ul { list-style: none; }
 }
 
 /* ===== FOOTER ===== */
-footer {
-  background: var(--secondary); color: #fff; text-align: center; padding: 25px;
+.footer {
+  background: var(--secondary);
+  color: #fff;
+  padding: 80px 60px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+/* --- Sections --- */
+.footer-section {
+  flex: 1 1 300px;
+}
+.footer-section h2.logo {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+.footer-section p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #ddd;
+}
+.footer-section h4 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.footer-section ul {
+  list-style: none;
+}
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-section ul li a:hover {
+  color: var(--primary);
+}
+
+/* --- Coordonnées --- */
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ddd;
+  font-size: 15px;
+}
+.footer-contact i {
+  color: var(--primary);
+}
+
+/* --- Réseaux sociaux --- */
+.footer-socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+.footer-socials a:hover {
+  background: var(--primary);
+  color: var(--secondary);
+  transform: translateY(-3px);
+}
+
+/* --- Bas de page --- */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+.footer-bottom p {
+  font-size: 14px;
+  color: #ccc;
+}
+.footer-bottom span {
+  color: var(--primary);
+  font-weight: 600;
 }
 
 /* Responsive */
