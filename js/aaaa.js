@@ -67,7 +67,7 @@ const offers = [
     location: "Kisangani",
     description: "Découvrez la pêche traditionnelle Wagenia sur le fleuve Congo, un savoir-faire ancestral.",
     image: "assets/img/destinations/pêche-wagenia.jpg",
-  },n
+  },
 
   // ======== HÉBERGEMENTS ========
   {
